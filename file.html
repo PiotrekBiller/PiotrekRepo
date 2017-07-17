@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs title="hello world example" /> 
+  <Content type="html">
+     <![CDATA[        
+       
+       <div class="row">
+      <div id="menu" class="col-xs-6 col-sm-3">
+        <div id="navbar"class="list-group">
+              <? var allSheets = getSheets(); ?>
+              <? for(var i=0;i<allSheets.length;i++){ ?>
+              <p id="sheet<?= allSheets[i]; ?>" onclick="loadData(this)" class="list-group-item"><?= allSheets[i]; ?></p>
+              <?}?>
+          </div>
+       </div>
+      <div id="content" class="col-xs-12 col-sm-6 col-md-8">
+      </div>
+    </div>
+    
+    <script>
+    //global variables
+var siteUrl="https://sites.google.com/site/anaxymenesgsite/";
+var sheetId = "1D5XTnmNsxFp2eqQWnxR-JDe-hPZ6wTEpGPhf8CkarZs";
+
+
+function doGet(){
+  return HtmlService.createTemplateFromFile("Index").evaluate();
+}
+
+function getSheets(){
+  var postService = new PostService(); 
+  var sheets = postService.getAllSheets();
+  var result = [];
+  for(var i=0;i<sheets.length;i++){
+    result.push(sheets[i].getName());
+  }
+  return result;
+}
+
+function getAllRecordsFromSheet(sheetName){
+  var postService =  new PostService(); 
+  var dataFromSheet =postService.getAllDataFromSheet(sheetName);
+  return dataFromSheet
+}
+
+function include(filename) {
+  return HtmlService.createHtmlOutputFromFile(filename)
+      .getContent();
+}
+    
+    //JS
+    var currentSheet = "";
+    
+    function loadData(e){
+      var sheetId = $(e).attr('id');
+      var content = $('#content');
+      if($(content).is(':visible')){
+        $(content).toggle();
+        $(content).empty();
+        disableActiveClassForField();
+      }
+      $('#'+sheetId).addClass("list-group-item active");
+      $(content).toggle();
+      var sheetName = sheetId.substring(5);
+      google.script.run.withSuccessHandler(getAllRecords).getAllRecordsFromSheet(sheetName);
+      currentSheet = sheetId;
+    }
+    
+    function disableActiveClassForField(){
+      $('#'+currentSheet).removeClass("list-group-item active").addClass("list-group-item");
+    }
+    
+    function getAllRecords(sheetRecords){
+      for(var i=0; i<sheetRecords.length;i++){
+        $('#content').append(createQuestionBox(sheetRecords[i]));
+        $('#answer'+sheetRecords[i].id).toggle();
+      }
+    }
+    
+    function toggleAnswer(e){
+      var answerId = $(e).attr('id').substring(8);
+      var answerDiv = 'answer'+answerId;
+      $('#'+answerDiv).toggle("normal");
+    }
+    
+    function createQuestionBox(sheetRecord){
+     var html = '<div id="questionBox" class="panel panel-default">';
+     html += '<div id="question'+sheetRecord.id+'" onclick="toggleAnswer(this)" class="panel-heading" >';
+     html += '<h3  class="panel-title">'+sheetRecord.question+' </h3></div>';
+     html += '<div id="answer'+sheetRecord.id+'" class="panel-body">'+sheetRecord.answer+'</div></div>';
+       return html;
+    }
+    
+    function addHtmlToParent(html, parentId){
+      $(parentId).append(html);
+    }
+    
+    $(document).ready(function(){
+      $('#question').on('click',function(){
+      });
+      $('#content').toggle();
+    });
+    
+    function RawPostModel(id, question, answer) {
+  this.id = id;
+  this.question = question;
+  this.answer = answer;
+}
+
+function PostModel(data)
+{
+   this.rawPostModels = [];
+   for(var i=0;i<data.length;i++){
+      this.rawPostModels.push(new RawPostModel(data[i][0],data[i][1],data[i][2]));
+    }
+ }
+ 
+ function PostService() {
+  this.getAllSheets = getAllSheets;
+  this.getAllDataFromSheet = getAllDataFromSheet;
+  
+  function getAllDataFromSheet(sheetName){
+    var dataFromSheet = getDataFromSheet(sheetName);
+    var postModel = new PostModel(dataFromSheet);
+    return postModel.rawPostModels;
+  }
+  
+  function getSheet(name){
+    var spreadsheet = SpreadsheetApp.openById(sheetId);
+    var sheet = spreadsheet.getSheetByName(name);
+    return sheet;
+  }
+  function getAllSheets(){
+    var spreadsheet = SpreadsheetApp.openById(sheetId);
+    return spreadsheet.getSheets();
+  }
+  function getDataFromSheet(sheetName){
+    var sheet = getSheet(sheetName);
+    var dataFromSheet = sheet.getRange(2,1,sheet.getLastRow()-1,sheet.getLastColumn()).getValues();
+    return dataFromSheet;
+  }
+}
+
+    
+    
+    </script>
+       
+       
+       
+       
+       
+     ]]>
+  </Content> 
+</Module>
