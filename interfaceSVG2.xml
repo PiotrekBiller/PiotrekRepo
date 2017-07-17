@@ -39,7 +39,7 @@
         var html = "";
         if(name)
         {
-            html = "<h1>" + name + "</h1>"+vars;
+            html = "<h1>" + name + "</h1>"+vars[0].key;
             html += address;
         }
         else
