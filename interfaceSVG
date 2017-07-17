@@ -29,6 +29,7 @@
     {
         var prefs = new gadgets.Prefs();
         name = prefs.getString("name");
+        address = prefs.getString("address");
         var html = "";
 
         if(name)
