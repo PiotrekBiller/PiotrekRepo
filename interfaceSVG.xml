@@ -30,11 +30,19 @@
         var prefs = new gadgets.Prefs();
         name = prefs.getString("name");
         address = prefs.getString("address");
+
+                var dict = []; 
+                dict.push({
+                  key1: "name",
+                  value: "address"
+                });
+
+
         var html = "";
 
         if(name)
         {
-            html = "<h1>" + name + "</h1>";
+            html = "<h1>" + name + "</h1>"+dict.key1;
             html += address;
         }
         else
