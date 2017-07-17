@@ -6,8 +6,8 @@
   <UserPref name="name" display_name="Name" required="true"/>
   <UserPref name="address" display_name="url" required="true"/>
   
-  <UserPref name="name1" display_name="Name" required="true"/>
-  <UserPref name="address1" display_name="url" required="true"/>
+  <UserPref name="name1" display_name="Name1" required="true"/>
+  <UserPref name="address1" display_name="url1" required="true"/>
   
   <UserPref name="name3" display_name="Name" required="true"/>
   <UserPref name="address3" display_name="url" required="true"/>
