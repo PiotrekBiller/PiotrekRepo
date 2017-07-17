@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs
+    title="List Data Type Example"
+    scrolling="true"/>
+  <UserPref name="name" display_name="Name for header" required="true"/>
+  <Content type="html">
+  <![CDATA[
+  <div id=content_div></div>
+
+  <script type="text/javascript">
+    main();
+    
+    function main()
+    {
+        var prefs = new gadgets.Prefs();
+        name = prefs.getString("name");
+        var html = "";
+
+        if(name)
+        {
+            html = "<h1>" + name + "</h1>";
+        }
+        else
+        {
+            html = "test name";
+        }
+        document.getElementById("content_div").innerHTML = html;
+    }
+  </script>
+
+  ]]>
+  </Content>
+</Module>
