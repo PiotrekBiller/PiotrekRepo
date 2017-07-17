@@ -31,18 +31,15 @@
         name = prefs.getString("name");
         address = prefs.getString("address");
 
-                var dict = []; 
-                dict.push({
-                  key: "name",
-                  value: "address"
-                });
-
+        var vars = [{key:"key", value:"value"}];
+        vars[0].key = "name";
+        vars[0].value = "address";
+                
 
         var html = "";
-
         if(name)
         {
-            html = "<h1>" + name + "</h1>"+dict.key[0];
+            html = "<h1>" + name + "</h1>"+vars;
             html += address;
         }
         else
