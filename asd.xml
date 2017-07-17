@@ -1,15 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="Go to Photo Album" height="250" scaling="false" />
-  <ModulePrefs title="Preferences for __UP_myname__" height="250" />
-  <UserPref name="myname" display_name="Name" required="true" />
-  <UserPref name="mycolor" display_name="Color" default_value="#ffffff" />
-    
-  </UserPref> 
+  <ModulePrefs
+    title="Interface SVG"
+    scrolling="true"/>
+  <UserPref name="name" display_name="Name" required="true"/>
+  <UserPref name="address" display_name="url" required="true"/>
+  
+  <UserPref name="name1" display_name="Name" required="true"/>
+  <UserPref name="address1" display_name="url" required="true"/>
+  
+  <UserPref name="name3" display_name="Name" required="true"/>
+  <UserPref name="address3" display_name="url" required="true"/>
+  
+  <UserPref name="name4" display_name="Name" required="true"/>
+  <UserPref name="address4" display_name="url" required="true"/>
+  
+  <UserPref name="name5" display_name="Name" required="true"/>
+  <UserPref name="address5" display_name="url" required="true"/>
+  
   <Content type="html">
   <![CDATA[
-    <div style="text-align:center">
-    </div>
+  <div id=content_div></div>
+  <script type="text/javascript">
+    main();
+    
+    function main()
+    {
+        var prefs = new gadgets.Prefs();
+        
+        name = prefs.getString("name");
+        address = prefs.getString("address");
+        name1 = prefs.getString("name1");
+        address1 = prefs.getString("address1");
+        
+        var vars = [{key:"key", value:"value"}];
+        vars[0].key = name;
+        vars[0].value = address;
+        vars[1].key = name1;
+        vars[1].value = address1;
+        
+                
+        var html = "";
+        if(name)
+        {
+            html = "<h1>" + "Name0 : " + "</h1>"+vars[0].key;
+            html += "url0 : " + vars[0].value;
+            html = "<h1>" + "Name1 : " + "</h1>"+vars[1].key;
+            html += "url1 : " + vars[1].value;
+           
+        }
+        else
+        {
+            html = "test name";
+        }
+        document.getElementById("content_div").innerHTML = html;
+    }
+  </script>
   ]]>
   </Content>
 </Module>
