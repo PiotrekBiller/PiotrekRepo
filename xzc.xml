@@ -13,7 +13,9 @@
      <script type="text/javascript">
    // Get userprefs
    var prefs = new gadgets.Prefs();
+   var html = "";
    html += prefs.getString("question");
+   element.innerHTML = html;
     </script>
   ]]>
   </Content>
