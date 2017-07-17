@@ -15,7 +15,7 @@
    // Get userprefs
    var prefs = new gadgets.Prefs();
    html += prefs.getString("question");
-
+    </script>
   ]]>
   </Content>
 </Module>
