@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="Go to Photo Album" height="250" scaling="false" />
+  <ModulePrefs title="title" height="250" scaling="false" />
   <UserPref name="question" display_name="Question" required="true" />
   <UserPref name="answer" display_name="Answer" />
-  </UserPref>
 
   <Content type="html">
   <![CDATA[
