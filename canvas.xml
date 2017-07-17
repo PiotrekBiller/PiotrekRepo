@@ -13,4 +13,9 @@
     <EnumValue value="Orange" />
     <EnumValue value="White" />
   </UserPref>
+  <Content type="html">
+     <![CDATA[ 
+       Hello, world!
+     ]]>
+  </Content> 
 </Module>
