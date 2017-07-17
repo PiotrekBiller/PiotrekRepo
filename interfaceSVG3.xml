@@ -42,7 +42,7 @@
 
         if(name)
         {
-            html = "<h1>" + name + "</h1>"+dict.key;
+            html = "<h1>" + name + "</h1>"+dict.key[0];
             html += address;
         }
         else
