@@ -33,7 +33,7 @@
 
                 var dict = []; 
                 dict.push({
-                  key1: "name",
+                  key: "name",
                   value: "address"
                 });
 
@@ -42,7 +42,7 @@
 
         if(name)
         {
-            html = "<h1>" + name + "</h1>"+dict.key1;
+            html = "<h1>" + name + "</h1>"+dict.key;
             html += address;
         }
         else
