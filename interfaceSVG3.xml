@@ -29,19 +29,22 @@
         var prefs = new gadgets.Prefs();
         name = prefs.getString("name");
         address = prefs.getString("address");
-
-
+        name2 = prefs.getString("name2");
+        address2 = prefs.getString("address2");
+ 
         var vars = [{key:"key", value:"value"}];
         vars[0].key = name;
         vars[0].value = address;
-
+        vars[1].key = name2;
+        vars[1].value = address2; -->
                 
         var html = "";
         if(name)
         {
             html = "<h1>" + "Name0 : " + "</h1>"+vars[0].key;
             html += "url0 : " + vars[0].value;
-
+           html = "<h1>" + "Name0 : " + "</h1>"+vars[1].key;
+            html += "url0 : " + vars[1].value;
         }
         else
         {
