@@ -30,14 +30,14 @@
         var prefs = new gadgets.Prefs();
         name = prefs.getString("name");
         address = prefs.getString("address");
-        name1 = prefs.getString("name");
+<!--         name1 = prefs.getString("name");
         address1 = prefs.getString("address");
-
+ -->
         var vars = [{key:"key", value:"value"}];
         vars[0].key = name;
         vars[0].value = address;
-        vars[1].key = name1;
-        vars[1].value = address1;
+<!--         vars[1].key = name1;
+        vars[1].value = address1; -->
                 
 
         var html = "";
@@ -45,8 +45,8 @@
         {
             html = "<h1>" + "Name0 : " + "</h1>"+vars[0].key;
             html += "<br />url0 : " + vars[0].value;
-          html = "<br/><h1>" + "Name0 : " + "</h1>"+vars[1].key;
-            html += "<br />url0 : " + vars[1].value;
+<!--           html = "<br/><h1>" + "Name0 : " + "</h1>"+vars[1].key;
+            html += "<br />url0 : " + vars[1].value; -->
         }
         else
         {
