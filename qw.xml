@@ -4,15 +4,8 @@
   <UserPref name="myname" display_name="Name" required="true" />
   <UserPref name="myphoto" display_name="Photo" default_value="http://doc.examples.googlepages.com/rowan-headshot.jpg"/>
   <UserPref name="mychoice" display_name="Show Photo?" datatype="bool" default_value="true"/>
-  <UserPref name="mycolor" display_name="Color" default_value="Yellow" datatype="enum" >
-    <EnumValue value="Red" />
-    <EnumValue value="Aqua" />
-    <EnumValue value="Lime" />
-    <EnumValue value="Yellow" />
-    <EnumValue value="Pink" />
-    <EnumValue value="Orange" />
-    <EnumValue value="White" />
-  </UserPref> 
+  <UserPref name="mycolor" display_name="Color" default_value="#ec1313" datatype="enum" />
+      
   <Content type="html">
   <![CDATA[
     <div style="text-align:center"><a
