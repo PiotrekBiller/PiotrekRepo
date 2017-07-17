@@ -32,15 +32,15 @@
         address = prefs.getString("address");
 
         var vars = [{key:"key", value:"value"}];
-        vars[0].key = "name";
-        vars[0].value = "address";
+        vars[0].key = name;
+        vars[0].value = address;
                 
 
         var html = "";
         if(name)
         {
-            html = "<h1>" + name + "</h1>"+vars[0].key;
-            html += address;
+            html = "<h1>" + "Name0 : " + "</h1>"+vars[0].key;
+            html += "url0 : " + vars[0].value;
         }
         else
         {
