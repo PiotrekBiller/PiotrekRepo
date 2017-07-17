@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="title" height="250" scaling="false" />
+  <UserPref name="question" display_name="Question" required="true" />
+  <UserPref name="answer" display_name="Answer" />
+
+  <Content type="html">
+  <![CDATA[
+    
+    <div style="text-align:center"><a
+    
+    </div>
+     <script type="text/javascript">
+   // Get userprefs
+   var prefs = new gadgets.Prefs();
+   html += prefs.getString("question");
+    </script>
+  ]]>
+  </Content>
+</Module>
