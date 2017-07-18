@@ -3,8 +3,8 @@
   <ModulePrefs
     title="Interface SVG"
     scrolling="true"/>
-  <UserPref name="name" display_name="Name" required="true"/>
-  <UserPref name="address" display_name="url" required="true"/>
+  <UserPref name="name0" display_name="Name" required="true"/>
+  <UserPref name="address0" display_name="url" required="true"/>
   
   <UserPref name="name1" display_name="Name" required="true"/>
   <UserPref name="address1" display_name="url" required="true"/>
@@ -28,15 +28,24 @@
     {
         var prefs = new gadgets.Prefs();
         
-        name = prefs.getString("name");
-        address = prefs.getString("address");
+        for(int i=0; i++; i<5){
+            name[i] = prefs.getString("name[i]");
+            address[i] = prefs.getString("address[i]");
+        }
+        
         var html = "";
-        var input = [{key:"key1", value:"value1"},{key:"key2", value:"value2"}];
-        var result = {};
+        var input = [
+        for(int i=0;i<5;i++){
+            { key:name[i], value:[address[i] }
+        }
+        
+        
+        ];
+        
 
         for(var i = 0; i < input.length; i++)
         {
-            html += input[i].key + " = " + input[i].value;
+            html += input[i].key + " = " + input[i].value + "<br />";
         }
        
                 
