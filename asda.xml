@@ -35,13 +35,7 @@
 
         
         var html = "";
-        var input = [
-        for(int i=0;i<5;i++){
-            {key:"key2", value:"value2"}
-        }
-        
-        
-        ];
+        var input = [{key:"key1", value:"value1"},{key:"key2", value:"value2"}];
         
 
         for(var i = 0; i < input.length; i++)
