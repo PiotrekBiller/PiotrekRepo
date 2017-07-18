@@ -36,7 +36,7 @@
 
         for(var i = 0; i < input.length; i++)
         {
-            html += result[input[i].key] = input[i].value;
+            html += input[i].key + " = " + input[i].value;
         }
        
                 
