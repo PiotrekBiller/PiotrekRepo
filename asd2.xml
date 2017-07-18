@@ -6,17 +6,17 @@
   <UserPref name="name" display_name="Name" required="true"/>
   <UserPref name="address" display_name="url" required="true"/>
   
-  <UserPref name="name1" display_name="Name1" required="true"/>
-  <UserPref name="address1" display_name="url1" required="true"/>
+  <UserPref name="name1" display_name="Name" required="true"/>
+  <UserPref name="address1" display_name="url" required="true"/>
+  
+  <UserPref name="name2" display_name="Name" required="true"/>
+  <UserPref name="address2" display_name="url" required="true"/>
   
   <UserPref name="name3" display_name="Name" required="true"/>
   <UserPref name="address3" display_name="url" required="true"/>
   
   <UserPref name="name4" display_name="Name" required="true"/>
   <UserPref name="address4" display_name="url" required="true"/>
-  
-  <UserPref name="name5" display_name="Name" required="true"/>
-  <UserPref name="address5" display_name="url" required="true"/>
   
   <Content type="html">
   <![CDATA[
@@ -30,14 +30,12 @@
         
         name = prefs.getString("name");
         address = prefs.getString("address");
-        name1 = prefs.getString("name1");
-        address1 = prefs.getString("address1");
+        
         
         var vars = [{key:"key", value:"value"}];
         vars[0].key = name;
         vars[0].value = address;
-        vars[1].key = name1;
-        vars[1].value = address1;
+        
         
                 
         var html = "";
@@ -45,8 +43,7 @@
         {
             html = "<h1>" + "Name0 : " + "</h1>"+vars[0].key;
             html += "url0 : " + vars[0].value;
-            html = "<h1>" + "Name1 : " + "</h1>"+vars[1].key;
-            html += "url1 : " + vars[1].value;
+            
            
         }
         else
