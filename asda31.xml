@@ -104,6 +104,11 @@
         var sitesHtml4 = sites[4].key; 
 
         document.getElementById("name0").innerHTML = sitesHtml0;
+        document.getElementById("name1").innerHTML = sitesHtml1;
+        document.getElementById("name2").innerHTML = sitesHtml2;
+        document.getElementById("name3").innerHTML = sitesHtml3;
+        document.getElementById("name4").innerHTML = sitesHtml4;
+
         document.getElementById("content_div").innerHTML = html;
     }
   </script>
