@@ -72,14 +72,17 @@
     {
         var prefs = new gadgets.Prefs();
         
-            for(int i = 0; i < 5; i++)
-            {
-                name+i = prefs.getString("name"+i);
-                address+i = prefs.getString("address"+i);
-            }
-            
+            name0 = prefs.getString("name0");
+            address0 = prefs.getString("address0");
+            name1 = prefs.getString("name1");
+            address1 = prefs.getString("address1");
+            name2 = prefs.getString("name2");
+            address2 = prefs.getString("address2");
+            name3 = prefs.getString("name3");
+            address3 = prefs.getString("address3");
+            name4 = prefs.getString("name4");
+            address4 = prefs.getString("address4");
         
-
         var html = "";
         var sites = [
         {key:name0, value:address0},
