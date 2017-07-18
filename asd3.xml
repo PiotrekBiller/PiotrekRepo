@@ -33,16 +33,16 @@
         
         
         var vars = [{key:"key", value:"value"}];
-        vars[0].key = name;
-        vars[0].value = address;
+        vars.key[0] = name;
+        vars.value[0] = address;
         
         
                 
         var html = "";
         if(name)
         {
-            html = "<h1>" + "Name0 : " + "</h1>"+vars[0].key;
-            html += "url0 : " + vars[0].value;
+            html = vars.key[0];
+            html += vars.value[0];
             
            
         }
