@@ -97,13 +97,13 @@
             html += sites[i].key + " = " + sites[i].value + "<br />";
         }
         
-        var sitesHtml0 = sites[0].key;
-        var sitesHtml1 = sites[1].key; 
-        var sitesHtml2 = sites[2].key; 
-        var sitesHtml3 = sites[3].key; 
-        var sitesHtml4 = sites[4].key; 
+        for(int i = 0; i < sites.length; i++)
+        {
+            var sitesHtml + i = sites[i].key;
+        }
+        
 
-        document.getElementById("field1").innerHTML = sitesHtml0;
+        document.getElementById("field0").innerHTML = sitesHtml0;
         document.getElementById("field1").innerHTML = sitesHtml1;
         document.getElementById("field2").innerHTML = sitesHtml2;
         document.getElementById("field3").innerHTML = sitesHtml3;
