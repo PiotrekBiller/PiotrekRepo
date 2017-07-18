@@ -42,23 +42,23 @@
     </style>
     <a href="#"><polygon fill="#4f81c0" class="hex" points="300,150 225,280 75,280 0,150 75,20 225,20"></polygon> </a>
     <polygon fill="#fff" class="hex" points="220,45 212.5,58 197.5,58 190,45 197.5,32 212.5,32"></polygon>
-    <text class="svgText" x="110" y="150"><tspan id="name0"></tspan></text>
+    <text class="svgText" x="110" y="150"><tspan id="field0"></tspan></text>
    
     <a href="#"><polygon fill="#4f81c0" class="hex" points="535,285 460,415 310,415 235,285 310,155 460,155"></polygon></a>
     <polygon fill="#fff" class="hex" points="455,180 447.5,193 432.5,193 425,180 432.5,167 447.5,167"></polygon>
-    <text class="svgText" x="110" y="150"><tspan id="name1"></tspan></text>
+    <text class="svgText" x="110" y="150"><tspan id="field1"></tspan></text>
  
     <a href="#"><polygon fill="#4f81c0" class="hex" points="300,420 225,550 75,550 0,420 75,290 225,290"></polygon></a>
     <polygon fill="#fff" class="hex" points="220,315 212.5,328 197.5,328 190,315 197.5,302 212.5,302"></polygon>
-    <text class="svgText" x="110" y="150"><tspan id="name2"></tspan></text>
+    <text class="svgText" x="110" y="150"><tspan id="field2"></tspan></text>
  
     <a href="#"><polygon fill="#4f81c0" class="hex" points="770,150 695,280 545,280 470,150 545,20 695,20"></polygon></a>
     <polygon fill="#fff" class="hex" points="690,45 682.5,58 667.5,58 660,45 667.5,32 682.5,32"></polygon>
-    <text class="svgText" x="110" y="150"><tspan id="name3"></tspan></text>
+    <text class="svgText" x="110" y="150"><tspan id="field3"></tspan></text>
  
     <a href="#"><polygon fill="#4f81c0" class="hex" points="770,420 695,550 545,550 470,420 545,290 695,290"></polygon></a>
     <polygon fill="#fff" class="hex" points="690,315 682.5,328 667.5,328 660,315 667.5,302 682.5,302"></polygon>
-    <text class="svgText" x="110" y="150"><tspan id="name4"></tspan></text>
+    <text class="svgText" x="110" y="150"><tspan id="field4"></tspan></text>
  
     </svg>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -103,11 +103,11 @@
         var sitesHtml3 = sites[3].key; 
         var sitesHtml4 = sites[4].key; 
 
-        document.getElementById("name0").innerHTML = sitesHtml0;
-        document.getElementById("name1").innerHTML = sitesHtml1;
-        document.getElementById("name2").innerHTML = sitesHtml2;
-        document.getElementById("name3").innerHTML = sitesHtml3;
-        document.getElementById("name4").innerHTML = sitesHtml4;
+        document.getElementById("field0").innerHTML = sitesHtml0;
+        document.getElementById("field1").innerHTML = sitesHtml1;
+        document.getElementById("field2").innerHTML = sitesHtml2;
+        document.getElementById("field3").innerHTML = sitesHtml3;
+        document.getElementById("field4").innerHTML = sitesHtml4;
 
         document.getElementById("content_div").innerHTML = html;
     }
