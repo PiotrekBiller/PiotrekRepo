@@ -30,10 +30,13 @@
         
             name0 = prefs.getString("name0");
             address0 = prefs.getString("address0");
+            name1 = prefs.getString("name1");
+            address1 = prefs.getString("address1");
 
         
         var html = "";
-        var input = [{key:name0, value:address0},{key:"key2", value:"value2"}];
+        var input = [{key:name0, value:address0},{key:name1, value:address1},
+        {key:"aaaaaa", value: "bbbbbb"}];
         
 
         for(var i = 0; i < input.length; i++)
