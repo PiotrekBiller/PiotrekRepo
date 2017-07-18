@@ -97,6 +97,8 @@
             html += sites[i].key + " = " + sites[i].value + "<br />";
         }
         
+        console.log(sites);
+
         var sitesHtml0 = sites[0].key;
         var sitesHtml1 = sites[1].key; 
         var sitesHtml2 = sites[2].key; 
