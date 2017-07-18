@@ -97,7 +97,7 @@
             html += sites[i].key + " = " + sites[i].value + "<br />";
         }
 
-        var sites1html = sites[i].key; 
+        var sites1html = sites[1].key; 
         document.getElementById("asd").innerHTML = sites1html;
         document.getElementById("content_div").innerHTML = html;
     }
