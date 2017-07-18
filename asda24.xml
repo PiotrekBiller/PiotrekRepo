@@ -32,11 +32,23 @@
             address0 = prefs.getString("address0");
             name1 = prefs.getString("name1");
             address1 = prefs.getString("address1");
+            name2 = prefs.getString("name2");
+            address2 = prefs.getString("address2");
+            name3 = prefs.getString("name3");
+            address3 = prefs.getString("address3");
+            name4 = prefs.getString("name4");
+            address4 = prefs.getString("address4");
 
         
         var html = "";
-        var input = [{key:name0, value:address0},{key:name1, value:address1},
-        {key:"aaaaaa", value: "bbbbbb"}];
+        var input = [
+        {key:name0, value:address0},
+        {key:name1, value:address1},
+        {key:name2, value:address2},
+        {key:name3, value:address3},
+        {key:name4, value:address4},
+        {key:"aaaaaa", value: "bbbbbb"}
+        ];
         
 
         for(var i = 0; i < input.length; i++)
