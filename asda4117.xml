@@ -18,16 +18,11 @@
   <UserPref name="name4" display_name="Name" required="true"/>
   <UserPref name="address4" display_name="url" required="true"/>
   
-  <Content type="html">
+  <Content type="html xmlns="http://www.w3.org/1999/xhtml"">
   <![CDATA[
   <div id=content_div></div>
 
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>GSite area map d3</title>
-        
         <style>
             .hexagon {
             stroke: #000;
@@ -47,8 +42,8 @@
                 -webkit-transform-origin: 50% 50%;
             }
         </style>
-    </head>
-    <body>
+    
+    
         <script src="http://d3js.org/d3.v3.min.js"></script>
         <script>
             var startPoints = [
@@ -171,12 +166,7 @@
                 return count;
             }
         </script>
-    </body>
-
-
-
-
-
+   
 
 
 
