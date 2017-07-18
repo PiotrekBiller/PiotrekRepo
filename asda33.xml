@@ -103,11 +103,11 @@
         var sitesHtml3 = sites[3].key; 
         var sitesHtml4 = sites[4].key; 
 
-        document.getElementByClassName("field1").innerHTML = sitesHtml0;
-        document.getElementByClassName("field1").innerHTML = sitesHtml1;
-        document.getElementByClassName("field2").innerHTML = sitesHtml2;
-        document.getElementByClassName("field3").innerHTML = sitesHtml3;
-        document.getElementByClassName("field4").innerHTML = sitesHtml4;
+        document.getElementById("field1").innerHTML = sitesHtml0;
+        document.getElementById("field1").innerHTML = sitesHtml1;
+        document.getElementById("field2").innerHTML = sitesHtml2;
+        document.getElementById("field3").innerHTML = sitesHtml3;
+        document.getElementById("field4").innerHTML = sitesHtml4;
 
         document.getElementById("content_div").innerHTML = html;
     }
