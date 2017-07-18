@@ -29,14 +29,14 @@
         var prefs = new gadgets.Prefs();
         
         for(int i=0; i++; i<1){
-            name[i] = prefs.getString("name[i]");
-            address[i] = prefs.getString("address[i]");
+            nameS[i] = prefs.getString("name[i]");
+            addressS[i] = prefs.getString("address[i]");
         }
         
         var html = "";
         var input = [
         for(int i=0;i<1;i++){
-            { key:name[i], value:[address[i] }
+            { key:nameS[i], value:[addressS[i] }
         }
         
         
