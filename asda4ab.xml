@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs
+    title="Interface SVG"
+    scrolling="true"/>
+  <UserPref name="name0" display_name="Name" required="true"/>
+  <UserPref name="address0" display_name="url" required="true"/>
+    
+  <Content type="html">
+  <![CDATA[
+  <div id=content_div></div>
+
+  <style>
+            .hexagon {
+            stroke: #000;
+            stroke-width: 0.5px;
+            }
+            .siteText{
+                fill: #000;
+                font: 30px Helvetica, Arial, Sans-Serif;
+                text-shadow: 4px 4px 6px rgba(150, 150, 150, 1);
+            }
+            .hexLink:hover
+            .hex{
+                fill: #2f7ee1;
+                transform: scale(1.05);
+                -webkit-transform: scale(1.05);
+                transform-origin: 50% 50%;
+                -webkit-transform-origin: 50% 50%;
+            }
+        </style>
+
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script>
+            var startPoints = [
+                {"x":300,"y":150},
+                {"x":535, "y":285},
+                {"x":300, "y":420},
+                {"x":770, "y":150},
+                {"x":770, "y":420},
+                {"x":1005 , "y":285},
+                {"x":535, "y":555},
+                {"x":1005, "y":555},
+                {"x":770, "y":695},
+                {"x":300, "y":695},
+                {"x":535, "y":830},
+            ];
+            var allBigHexagonPoints = [];
+            var allSmallHexagonPoints = [];
+            generateAllPointsOfHexagon();
+            function generateAllPointsOfHexagon(){
+                
+                for(var i=0;i<startPoints.length;i++){
+                    allBigHexagonPoints.push(generatePointOfBigHexagon(startPoints[i]));
+                    allSmallHexagonPoints.push(generatePointOfSmallHexagon(startPoints[i]));
+                }
+            }
+            function generatePointOfBigHexagon(startPoint){
+                var points = [
+                    {"x": startPoint.x , "y":startPoint.y},
+                    {"x": startPoint.x-75 , "y":startPoint.y+130},
+                    {"x": startPoint.x-225 , "y":startPoint.y+130},
+                    {"x": startPoint.x-300 , "y":startPoint.y},
+                    {"x": startPoint.x-225 , "y":startPoint.y-130},
+                    {"x": startPoint.x-75 , "y":startPoint.y-130}
+                ];
+                return points;
+            }
+            function generatePointOfSmallHexagon(startPoint){
+                var points = [
+                    {"x": startPoint.x-80 , "y":startPoint.y-105},
+                    {"x": startPoint.x-87.5 , "y":startPoint.y-92},
+                    {"x": startPoint.x-102.5 , "y":startPoint.y-92},
+                    {"x": startPoint.x-110 , "y":startPoint.y-105},
+                    {"x": startPoint.x-102.5 , "y":startPoint.y-118},
+                    {"x": startPoint.x-87.5 , "y":startPoint.y-118}
+                ];
+                return points;
+            }
+        </script>
+        <script>
+            var sites = {
+                "Home" : "http://google.pl",
+                "Departments" : "http://google.pl",
+                "Channels" : "http://google.pl",
+                "Solutions" : "http://google.pl",
+                "Channels2" : "http://google.pl",
+                "Solutions2" : "http://google.pl",
+                "Channels3" : "http://google.pl",
+                "Solutions3" : "http://google.pl",
+            };
+            drawHexagon = 
+            d3.svg.line()
+                    .x(function(d) { return d.x; })
+                    .y(function(d) { return d.y; });
+
+
+            var svgContainer = 
+                d3.select("body")
+                .append("svg")
+                .attr("width", 200*countOfSites())
+                .attr("height", 200*countOfSites());
+            
+            //Generate Bix Hexagon
+            for(var i=0;i<countOfSites();i++){
+                var enterElements = 
+                svgContainer.append("a")
+                            .attr("class","hexLink")
+                            .attr("href","#")
+                            .attr("target","_self")
+                            .append("g")
+                            .attr("class","nodes")
+                            .append("path")
+                            .attr("d", drawHexagon(allBigHexagonPoints[i]))
+                            .attr("fill","#4f81c0")
+                            .attr("class","hex");         
+            }
+            
+            //Generate Small Hexagon in Big
+            for(var i=0;i<countOfSites();i++){
+                var enterElements = 
+                svgContainer.selectAll("g:nth-child(1)")
+                            .filter(function(d, j) { return j == i; })
+                            .append("path")
+                            .attr("d",drawHexagon(allSmallHexagonPoints[i]))
+                            .attr("fill","#fff");
+                
+            }
+            var index = 0;
+            for( var key in sites)
+            {
+                var enterElements =
+                svgContainer.selectAll("a")
+                            .filter(function(d,j) {return j==index})
+                            .attr("href",sites[key]);
+                var text = 
+                svgContainer.selectAll("g")
+                            .filter(function(d,j){return j==index})
+                            .append("text")
+                            .attr("text-anchor", "middle")
+                            .attr("class","siteText")
+                            .attr("x",(allBigHexagonPoints[index][0].x - allBigHexagonPoints[index][3].x)/2 + allBigHexagonPoints[index][3].x)
+                            .attr("y",allBigHexagonPoints[index][3].y)
+                            .text(key);
+                index++;
+            }
+            
+            function countOfSites(){
+                var count = 0;
+                for(var key in sites)
+                    count++;
+                return count;
+            }
+        </script>
+  
+<p>tekst example czy działa</p>
+  
+  
+  ]]>
+  </Content>
+</Module>
