@@ -95,7 +95,7 @@
 
 
             var svgContainer = 
-                d3.select("div")
+                d3.select("body")
                 .append("svg")
                 .attr("width", 200*countOfSites())
                 .attr("height", 200*countOfSites());
