@@ -9,6 +9,7 @@
   <Content type="html">
   <![CDATA[
   <style>
+
             .hexagon {
             stroke: #000;
             stroke-width: 0.5px;
@@ -95,7 +96,8 @@
 
 
             var svgContainer = 
-                d3.select("content")
+                d3.select("div")
+                .attr("id", "content")
                 .append("svg")
                 .attr("width", 200*countOfSites())
                 .attr("height", 200*countOfSites());
