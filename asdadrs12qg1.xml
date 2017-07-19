@@ -6,11 +6,23 @@
   <UserPref name="name0" display_name="Name" required="true"/>
   <UserPref name="address0" display_name="url" required="true"/>
   
+  <UserPref name="name1" display_name="Name" required="true"/>
+  <UserPref name="address1" display_name="url" required="true"/>
+  
+  <UserPref name="name2" display_name="Name" required="true"/>
+  <UserPref name="address2" display_name="url" required="true"/>
+  
+  <UserPref name="name3" display_name="Name" required="true"/>
+  <UserPref name="address3" display_name="url" required="true"/>
+  
+  <UserPref name="name4" display_name="Name" required="true"/>
+  <UserPref name="address4" display_name="url" required="true"/>
+  
   
   
   <Content type="html">
   <![CDATA[
-  
+  <div id=content_div></div>
 
 
 
@@ -53,6 +65,23 @@
     <text class="svgText" x="470" y="430"></text></a>
 
     <script>
+        var prefs = new gadgets.Prefs();
+        
+            name0 = prefs.getString("name0");
+            address0 = prefs.getString("address0");
+            name1 = prefs.getString("name1");
+            address1 = prefs.getString("address1");
+            name2 = prefs.getString("name2");
+            address2 = prefs.getString("address2");
+            name3 = prefs.getString("name3");
+            address3 = prefs.getString("address3");
+            name4 = prefs.getString("name4");
+            address4 = prefs.getString("address4");
+
+
+
+
+
         var sites = {
             "Home" : "http://google.pl",
             "Departments" : "http://google.pl",
@@ -82,6 +111,8 @@
             add();
 
         }
+
+        
     </script>
     </svg>
 
