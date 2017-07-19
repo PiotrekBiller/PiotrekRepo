@@ -84,11 +84,9 @@
                 {key:name3, value:address3},
                 {key:name4, value:address4},
             ];
-            
-            var sitesHtml0 = asdf[0].key;
 
             var sites = {
-            sitesHtml0 : "value",
+            name0 : "http://google.pl",
             "Departments" : "http://google.pl",
             "Channels" : "http://google.pl",
             "Solutions" : "http://google.pl",
