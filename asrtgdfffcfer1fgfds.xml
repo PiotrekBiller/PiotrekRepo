@@ -77,7 +77,7 @@
             name4 = prefs.getString("name4");
             address4 = prefs.getString("address4");
 
-            var asdf = [
+            var sites = [
                 {key:name0, value:address0},
                 {key:name1, value:address1},
                 {key:name2, value:address2},
@@ -85,13 +85,7 @@
                 {key:name4, value:address4},
             ];
 
-            var sites = {
-            "sites[0].key" : "sites[0].value",
-            "sites[1].key" : "sites[1].value",
-            "sites[2].key" : "sites[2].value",
-            "sites[3].key" : "sites[3].value",
-            "sites[4].key" : "sites[4].value",
-        };
+            
 
             var element = document.getElementsByTagName("text"); 
             var elementsA = document.getElementsByTagName("a");
