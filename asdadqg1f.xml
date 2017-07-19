@@ -62,6 +62,27 @@
     <text class="svgText" x="470" y="430"></text></a>
 
     <script>
+        function main()
+        {
+        var prefs = new gadgets.Prefs();
+        
+            name0 = prefs.getString("name0");
+            address0 = prefs.getString("address0");
+            name1 = prefs.getString("name1");
+            address1 = prefs.getString("address1");
+            name2 = prefs.getString("name2");
+            address2 = prefs.getString("address2");
+            name3 = prefs.getString("name3");
+            address3 = prefs.getString("address3");
+            name4 = prefs.getString("name4");
+            address4 = prefs.getString("address4");
+        
+        
+        
+        
+        }
+
+
         var sites = {
             "Home" : "http://google.pl",
             "Departments" : "http://google.pl",
@@ -88,7 +109,9 @@
             }
         }
         window.onload = function(){
+            main();
             add();
+            
 
         }
     </script>
