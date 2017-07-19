@@ -81,7 +81,14 @@
         
         
         }
-
+        
+        var site = [
+        {key:name0, value:address0},
+        {key:name1, value:address1},
+        {key:name2, value:address2},
+        {key:name3, value:address3},
+        {key:name4, value:address4},
+        ];
 
         var sites = {
             "Home" : "http://google.pl",
