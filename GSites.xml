@@ -3,6 +3,20 @@
   <ModulePrefs
     title="Interface SVG"
     scrolling="true"/>
+	<!--	<UserPref name="name0" display_name="Name" required="true"/>
+		 <UserPref name="address0" display_name="url" required="true"/>
+		  
+		<UserPref name="name1" display_name="Name" required="true"/>
+		<UserPref name="address1" display_name="url" required="true"/>
+		  
+		<UserPref name="name2" display_name="Name" required="true"/>
+		<UserPref name="address2" display_name="url" required="true"/>
+		  
+		<UserPref name="name3" display_name="Name" required="true"/>
+		<UserPref name="address3" display_name="url" required="true"/>
+		  
+		<UserPref name="name4" display_name="Name" required="true"/>
+		<UserPref name="address4" display_name="url" required="true"/> -->
   <Content type="html">
   <![CDATA[
 	<svg height="1000" width="1000">
