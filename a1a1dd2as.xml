@@ -85,6 +85,12 @@
                 {key:name4, value:address4},
             ];
 
+            for(var i = 0; i < asdf.length; i++)
+        {
+            var siteKey + i = asdf[i].key;
+            var siteValue + i = asdf[i].value;
+        }
+
             var sites = {
             asdf[0].key : asdf[0].value,
             "Departments" : "http://google.pl",
