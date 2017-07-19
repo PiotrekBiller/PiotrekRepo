@@ -8,6 +8,7 @@
     
   <Content type="html">
   <![CDATA[
+  <head>
   <style>
             .hexagon {
             stroke: #000;
@@ -27,7 +28,7 @@
                 -webkit-transform-origin: 50% 50%;
             }
         </style>
-
+    </head>
         <body>
         <p>test w body</p>
         <script src="http://d3js.org/d3.v3.min.js"></script>
