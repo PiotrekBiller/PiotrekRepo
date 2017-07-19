@@ -62,8 +62,8 @@
     <text class="svgText" x="470" y="430"></text></a>
 
     <script>
-        function main()
-        {
+        
+        function add(){
         var prefs = new gadgets.Prefs();
         
             name0 = prefs.getString("name0");
@@ -76,22 +76,23 @@
             address3 = prefs.getString("address3");
             name4 = prefs.getString("name4");
             address4 = prefs.getString("address4");
-        
-        
-        
-        
-        }
-        
-        var sites = [
-        {key:name0, value:address0},
-        {key:name1, value:address1},
-        {key:name2, value:address2},
-        {"cdsvs", value:address3},
-        {key:name4, value:address4},
-        ];
 
+            var asdf = [
+                {key:name0, value:address0},
+                {key:name1, value:address1},
+                {key:name2, value:address2},
+                {key:name3, value:address3},
+                {key:name4, value:address4},
+            ];
 
-        function add(){
+            var sites = {
+            "sites[0].key" : "sites[0].value",
+            "sites[1].key" : "sites[1].value",
+            "sites[2].key" : "sites[2].value",
+            "sites[3].key" : "sites[3].value",
+            "sites[4].key" : "sites[4].value",
+        };
+
             var element = document.getElementsByTagName("text"); 
             var elementsA = document.getElementsByTagName("a");
             var index = 0;
