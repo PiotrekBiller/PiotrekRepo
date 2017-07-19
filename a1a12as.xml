@@ -77,7 +77,7 @@
             name4 = prefs.getString("name4");
             address4 = prefs.getString("address4");
 
-            var sites = [
+            var asdf = [
                 {key:name0, value:address0},
                 {key:name1, value:address1},
                 {key:name2, value:address2},
@@ -85,8 +85,8 @@
                 {key:name4, value:address4},
             ];
 
-            var sitcfdfwes = {
-            name0 : "http://google.pl",
+            var sites = {
+            asdf.key[0] : "http://google.pl",
             "Departments" : "http://google.pl",
             "Channels" : "http://google.pl",
             "Solutions" : "http://google.pl",
