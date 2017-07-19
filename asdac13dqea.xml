@@ -9,7 +9,7 @@
   <Content type="html">
   <![CDATA[
   <style>
-           .hexagon {
+            .hexagon {
             stroke: #000;
             stroke-width: 0.5px;
             }
@@ -27,7 +27,7 @@
                 -webkit-transform-origin: 50% 50%;
             }
         </style>
-    <div id=content>
+    <div id = content>
         <p>test w body</p>
         <script src="http://d3js.org/d3.v3.min.js"></script>
         <script>
@@ -95,7 +95,7 @@
 
 
             var svgContainer = 
-                selection.select(d3.selector("div"))
+                d3.selectAll("div")
                 .append("svg")
                 .attr("width", 200*countOfSites())
                 .attr("height", 200*countOfSites());
