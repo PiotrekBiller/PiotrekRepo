@@ -27,7 +27,7 @@
                 -webkit-transform-origin: 50% 50%;
             }
         </style>
-    <div>
+    <div id=content>
         <p>test w body</p>
         <script src="http://d3js.org/d3.v3.min.js"></script>
         <script>
@@ -95,8 +95,8 @@
 
 
             var svgContainer = 
-                d3.selectAll("div")
-                .append("div")
+                d3.select("div")
+                .append("svg")
                 .attr("width", 200*countOfSites())
                 .attr("height", 200*countOfSites());
             
