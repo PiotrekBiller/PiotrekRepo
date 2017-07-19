@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs
+    title="Interface SVG"
+    scrolling="true"/>
+  <UserPref name="name0" display_name="Name" required="true"/>
+  <UserPref name="address0" display_name="url" required="true"/>
+  
+  
+  
+  <Content type="html">
+  <![CDATA[
+  
+
+
+
+<svg height="1000" width="1000">
+    <style>
+        .svgText{
+            fill: #000;
+            font: 30px Helvetica, Arial, Sans-Serif;
+            text-shadow: 4px 4px 6px rgba(150, 150, 150, 1);
+        }
+        .hex:hover{
+            fill: #2f7ee1;
+            transform: scale(1.01);
+            -webkit-transform: scale(1.01);
+            transform-origin: 50% 50%;
+            -webkit-transform-origin: 50% 50%;
+        }
+        .hex:hover text{
+            fill: #322332;
+        }
+    </style>
+    <a href="#"><polygon fill="#4f81c0" class="hex" points="300,150 225,280 75,280 0,150 75,20 225,20"></polygon> 
+    <polygon fill="#fff" class="hex" points="220,45 212.5,58 197.5,58 190,45 197.5,32 212.5,32"></polygon>
+    <text class="svgText" x="0" y="160"></text></a>
+    
+    <a href="#"><polygon fill="#4f81c0" class="hex" points="535,285 460,415 310,415 235,285 310,155 460,155"></polygon>
+    <polygon fill="#fff" class="hex" points="455,180 447.5,193 432.5,193 425,180 432.5,167 447.5,167"></polygon>
+    <text class="svgText" x="235" y="290"></text></a>
+
+    <a href="#"><polygon fill="#4f81c0" class="hex" points="300,420 225,550 75,550 0,420 75,290 225,290"></polygon>
+    <polygon fill="#fff" class="hex" points="220,315 212.5,328 197.5,328 190,315 197.5,302 212.5,302"></polygon>
+    <text class="svgText" x="0" y="430"></text></a>
+
+    <a href="#"><polygon fill="#4f81c0" class="hex" points="770,150 695,280 545,280 470,150 545,20 695,20"></polygon>
+    <polygon fill="#fff" class="hex" points="690,45 682.5,58 667.5,58 660,45 667.5,32 682.5,32"></polygon>
+    <text class="svgText" x="470" y="160"></text></a>
+
+    <a href="#"><polygon fill="#4f81c0" class="hex" points="770,420 695,550 545,550 470,420 545,290 695,290"></polygon>
+    <polygon fill="#fff" class="hex" points="690,315 682.5,328 667.5,328 660,315 667.5,302 682.5,302"></polygon>
+    <text class="svgText" x="470" y="430"></text></a>
+
+    <script>
+        var sites = {
+            "Home" : "http://google.pl",
+            "Departments" : "http://google.pl",
+            "Channels" : "http://google.pl",
+            "Solutions" : "http://google.pl",
+            "Commercial": "http://google.pl"
+        };
+
+        function add(){
+            var element = document.getElementsByTagName("text"); 
+            var elementsA = document.getElementsByTagName("a");
+            var index = 0;
+            for(var key in sites){
+                var x = element[index].getAttribute('x');
+                x = parseInt(x);
+                if(key.length < 8)
+                    x+= 20;
+                else if(key.length > 9)
+                    x-= 20;
+                x += 90 - (key.length);
+                element[index].setAttribute('x',x);
+                elementsA[index].setAttribute('href',sites[key]);
+                element[index++].innerHTML = key;
+            }
+        }
+        window.onload = function(){
+            add();
+
+        }
+    </script>
+    </svg>
+
+
+
+
+
+
+
+  ]]>
+  </Content>
+</Module>
