@@ -86,7 +86,7 @@
             ];
 
             var sites = {
-            "asdf[0].key" : "http://google.pl",
+            asdf[0].key : "http://google.pl",
             "Departments" : "http://google.pl",
             "Channels" : "http://google.pl",
             "Solutions" : "http://google.pl",
