@@ -6,7 +6,7 @@
   <UserPref name="name0" display_name="Name" required="true"/>
   <UserPref name="address0" display_name="url" required="true"/>
     
-  <Content type="html xmlns='http://www.w3.org/1999/xhtml'">
+  <Content type="html xmlns="http://www.w3.org/1999/xhtml"">
   <![CDATA[
   <style>
             .hexagon {
