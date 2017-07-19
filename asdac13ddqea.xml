@@ -27,7 +27,7 @@
                 -webkit-transform-origin: 50% 50%;
             }
         </style>
-    <div id = content>
+    <div>
         <p>test w body</p>
         <script src="http://d3js.org/d3.v3.min.js"></script>
         <script>
