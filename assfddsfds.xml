@@ -63,15 +63,6 @@
 
     <script>
         
-        var sites = {
-            "Home" : "http://google.pl",
-            "Departments" : "http://google.pl",
-            "Channels" : "http://google.pl",
-            "Solutions" : "http://google.pl",
-            "Commercial": "http://google.pl"
-        };
-        
-
         function add(){
         var prefs = new gadgets.Prefs();
         
@@ -94,7 +85,13 @@
                 {key:name4, value:address4},
             ];
 
-            
+            var sites = {
+            "Home" : "http://google.pl",
+            "Departments" : "http://google.pl",
+            "Channels" : "http://google.pl",
+            "Solutions" : "http://google.pl",
+            "Commercial": "http://google.pl"
+        };
 
             
 
@@ -115,6 +112,7 @@
             }
         }
         window.onload = function(){
+            
             add();
             
 
