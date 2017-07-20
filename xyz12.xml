@@ -3,10 +3,13 @@
   <ModulePrefs
     title="Interface SVG"
     scrolling="true"/>
-		<UserPref name="ask-1" display_name="Ask-1" required="true"/>
-		 		  
-		<UserPref name="ask-2" display_name="Ask-2" required="true"/>
-				  
+        <div>
+            <UserPref name="ask-1" display_name="Ask nr1" required="true"/>
+            <UserPref name="question-1" display_name="Question nr1" required="true"/>
+        </div>
+        <diV>
+		    <UserPref name="ask-2" display_name="Ask-2" required="true"/>
+		</div>		  
 		<UserPref name="ask-3" display_name="Ask-3" required="true"/>
 
   <Content type="html">
