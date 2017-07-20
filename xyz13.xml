@@ -41,7 +41,7 @@
         for(i=0;i<answer.length;i++){
             answerHtml += answer[i] + "  </br>";
         }
-        document.getElementBiId("content2").innerHTML = answerHtml;
+        document.getElementById("content2").innerHTML = answerHtml;
     }
 
     window.onload = function(){
