@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs
+    title="Interface SVG"
+    scrolling="true"/>
+        
+        <UserPref name="question-1" display_name="Question nr1" required="true"/>
+        <UserPref name="answer-1" display_name="Answer nr1" required="true"/>
+        
+	    <UserPref name="question-2" display_name="Question-2" required="true"/>
+		  
+		<UserPref name="question-3" display_name="Question-3" required="true"/>
+
+  <Content type="html">
+
+<![CDATA[
+    <div id="content_div"></div>
+    <div id="content2"></div>
+
+    <script type="text/javascript">
+        
+
+    function create(){ 
+        var prefs = new gadgets.Prefs();
+
+        var questionHtml = "";
+        var question = [];
+        question[0] = prefs.getString("question-1");
+        question[1] = prefs.getString("question-2");
+        question[2] = prefs.getString("question-3");
+        for(i=0;i<question.length;i++){
+            questionHtml += question[i] + "  </br>";
+        }        
+        document.getElementById("content_div").innerHTML = questionHtml;
+    
+
+    
+        var answerHtml = "";
+        var answer = [];
+        answer[0] = prefs.getString("answer-1");
+        for(i=0;i<answer.length;i++){
+            answerHtml += answer[i] + "  </br>";
+        }
+        document.getElementBiId("content2").innerHTML = answerHtml;
+    }
+
+    window.onload = function(){
+        create();
+    }    
+    </script>
+    
+]]>
+</Content>
+</Module>
