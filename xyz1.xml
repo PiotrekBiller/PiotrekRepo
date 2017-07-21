@@ -13,6 +13,11 @@
 		<UserPref name="question-3" display_name="Question-3"/>
         <UserPref name="answer-3" display_name="Answer nr3"/>
 
+        <UserPref name="questionList" display_name="Add data to list" datatype="list" />
+
+
+
+
   <Content type="html">
 
 <![CDATA[
@@ -41,7 +46,16 @@
             html += question[i] + "  </br>";
             html += answer[i] + "  </br>";
         }        
-        document.getElementById("content_div").innerHTML = html;        
+        document.getElementById("content_div").innerHTML = html; 
+
+
+        var list = prefs.setArray("questionList");
+        var html2 = "";
+
+        for (i=0;i<list.length;i++){
+            html2+=list[i];
+        }
+        document.getElementById("content2").innerHTML = html2;    
     }
 
     window.onload = function(){
