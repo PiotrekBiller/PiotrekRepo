@@ -106,7 +106,7 @@ function toggle(targetId) {
 
         function response(obj) {              
             var domdata = obj.data; 
-            //var title = domdata.getElementsByTagName("data").item(0).getAttribute("title"); 
+            var title = ""; 
             var html="<div style=\"font-family:__UP_FontType__; color:__UP_FontKLeur__; font-size:__UP_FontSize__px; \"><span style=\"font-family:__UP_FontTypeTitel__; color:__UP_KLeurTitel__; font-size:__UP_FontSizeTitel__px;\">"+title+"</span><br/><br/>"; 
             
             // Get a list of the <set> element nodes in the file 
