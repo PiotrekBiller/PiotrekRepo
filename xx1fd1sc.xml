@@ -87,7 +87,7 @@ function toggle(targetId) {
         target.style.display=""; 
         } else { 
             target.style.display="none"; 
-            target.style.color=""; 
+            target.style.color="__UP_FontKleurAnswer__"; 
         } 
     } 
 </script> 
