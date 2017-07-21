@@ -27,6 +27,20 @@
   </UserPref>
 <UserPref name="FontSize" display_name="Text-Font size (px):" default_value="14" datatype="string"/>
 
+
+<UserPref name="FontTypeAnswer" display_name="Text-Font type:" default_value="ARIAL" datatype="string"/>
+<UserPref name="FontKleurAnswer" display_name="Text-Text color:" default_value="red" datatype="enum" >
+    <EnumValue value="Grey" />
+    <EnumValue value="Green" />
+    <EnumValue value="Lightblue" />
+    <EnumValue value="Yellow" />
+    <EnumValue value="Red" />
+    <EnumValue value="Orange" />
+    <EnumValue value="White" />
+  </UserPref>
+<UserPref name="FontSizeAnswer" display_name="Text-Font size (px):" default_value="14" datatype="string"/>
+
+
 <UserPref name="PaddingLeft" display_name="Padding left (px):" default_value="5" datatype="string"/>
 <UserPref name="BackGround" display_name="Background-color:" default_value="white" datatype="enum" >
     <EnumValue value="White" />
@@ -95,7 +109,8 @@ function toggle(targetId) {
                                 if (inleiding != undefined) { 
                                     html += "<span id=inleiding"+i+" style=\" font-family:__UP_FontType__; color:__UP_FontKleur__; font-size:__UP_FontSize__px; margin:0px; \">" + inleiding + "</span><br>"; } 
                                     html += "<a href=\"javascript:toggle(\'antwoord"+i+"\')\"style=\" font-family:__UP_FontType__; color:__UP_FontKleur__; font-size:__UP_FontSize__px; text-decoration: none;\">"+vraagstelling+"</a>"; 
-                                    html += "<br>"; html += "<div id=antwoord"+i+" style=\" font-family:__UP_FontType__; color:__UP_FontKleur__; font-size:__UP_FontSize__px; padding-left:__UP_PaddingLeft__px; display:none;\">" + antwoord + "</div><br>"; } 
+                                    html += "<br>"; 
+                                    html += "<div id=antwoord"+i+" style=\" font-family:__UP_FontTypeAnswer__; color:__UP_FontKleurAnswer__; font-size:__UP_FontSizeAnswer__px; padding-left:__UP_PaddingLeft__px; display:none;\">" + antwoord + "</div><br>"; } 
                                     // Close up div 
                                     html += "</div>"; document.getElementById('content_div').innerHTML += html; }; 
                                     gadgets.util.registerOnLoadHandler(makeDOMRequest); 
