@@ -1,6 +1,6 @@
 <Module>
-<ModulePrefs title="__UP_titelGadget__" height="400" width="400" scaling="true"/>
-<UserPref name="titelGadget" display_name="Titel" required="true" default_value="Answer and Questions" datatype="string"/>
+<ModulePrefs height="400" width="400" scaling="true"/>
+<UserPref name="titelGadget" display_name="Title" required="true" default_value="Answer and Questions" datatype="string"/>
 <UserPref name="xmlURL" display_name="Xml-file (url)." required="true" default_value="https://sites.google.com/site/piotrekggsite/data.xml" datatype="string"/>
 <!-- Edit title -->
 <UserPref name="FontTypeTitel" display_name="Title-Font type:" default_value="ARIAL" datatype="string"/>
