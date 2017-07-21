@@ -58,7 +58,7 @@
         for (i=0;i<list.length;i++){
             html2+=list[i];
         }
-        document.getElementById("content2").innerHTML = html2;    
+        document.getElementById("content2").innerHTML = html2; 
     }
 
     window.onload = function(){
