@@ -87,7 +87,7 @@ function toggle(targetId) {
         target.style.display=""; 
         } else { 
             target.style.display="none"; 
-            target.style.color="grey"; 
+            target.style.color=""; 
         } 
     } 
 </script> 
