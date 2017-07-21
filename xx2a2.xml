@@ -16,11 +16,27 @@
 <UserPref name="FontSizeTitel" display_name="Titel-Font size (px):" default_value="20" datatype="string"/>
 
 <UserPref name="FontType" display_name="Text-Font type:" default_value="ARIAL" datatype="string"/>
-<UserPref name="FontKleur" display_name="Text-Text color:" default_value="grey" datatype="string"/>
+<UserPref name="FontKleur" display_name="Text-Text color:" default_value="grey" datatype="enum" >
+    <EnumValue value="Red" />
+    <EnumValue value="Green" />
+    <EnumValue value="Lightblue" />
+    <EnumValue value="Yellow" />
+    <EnumValue value="Pink" />
+    <EnumValue value="Orange" />
+    <EnumValue value="White" />
+  </UserPref>
 <UserPref name="FontSize" display_name="Text-Font size (px):" default_value="14" datatype="string"/>
 
 <UserPref name="PaddingLeft" display_name="Padding left (px):" default_value="5" datatype="string"/>
-<UserPref name="BackGround" display_name="Background-color:" default_value="white" datatype="string"/>
+<UserPref name="BackGround" display_name="Background-color:" default_value="white" datatype="enum" >
+    <EnumValue value="Red" />
+    <EnumValue value="Green" />
+    <EnumValue value="Lightblue" />
+    <EnumValue value="Yellow" />
+    <EnumValue value="Pink" />
+    <EnumValue value="Orange" />
+    <EnumValue value="White" />
+  </UserPref>
 <Content type="html">
 <![CDATA[
 
