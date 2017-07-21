@@ -2,7 +2,8 @@
 <ModulePrefs title="__UP_titelGadget__" height="400" width="400" scaling="true"/>
 <UserPref name="titelGadget" display_name="Titel" required="true" default_value="Answer and Questions" datatype="string"/>
 <UserPref name="xmlURL" display_name="Xml-file (url)." required="true" default_value="https://sites.google.com/site/piotrekggsite/host.xml" datatype="string"/>
-
+<!-- Edit title -->
+<ModulePrefs>
 <UserPref name="FontTypeTitel" display_name="Title-Font type:" default_value="ARIAL" datatype="string"/>
 <UserPref name="KLeurTitel" display_name="Title-Text color:" default_value="grey" datatype="enum" >
     <EnumValue value="Grey" />
@@ -14,7 +15,8 @@
     <EnumValue value="White" />
   </UserPref>
 <UserPref name="FontSizeTitel" display_name="Titel-Font size (px):" default_value="20" datatype="string"/>
-
+</ModulePrefs>
+<!-- Edit question -->
 <UserPref name="FontType" display_name="Text-Font type:" default_value="ARIAL" datatype="string"/>
 <UserPref name="FontKleur" display_name="Text-Text color:" default_value="grey" datatype="enum" >
     <EnumValue value="Grey" />
@@ -27,7 +29,7 @@
   </UserPref>
 <UserPref name="FontSize" display_name="Text-Font size (px):" default_value="14" datatype="string"/>
 
-
+<!-- Edit answer -->
 <UserPref name="FontTypeAnswer" display_name="Text-Font type:" default_value="ARIAL" datatype="string"/>
 <UserPref name="FontKleurAnswer" display_name="Text-Text color:" default_value="red" datatype="enum" >
     <EnumValue value="Grey" />
@@ -40,8 +42,8 @@
   </UserPref>
 <UserPref name="FontSizeAnswer" display_name="Text-Font size (px):" default_value="14" datatype="string"/>
 
-
-<UserPref name="PaddingLeft" display_name="Padding left (px):" default_value="5" datatype="string"/>
+<!-- Edit padding, background color -->
+<UserPref name="PaddingLeft" display_name="Padding left (px):" default_value="25" datatype="string"/>
 <UserPref name="BackGround" display_name="Background-color:" default_value="white" datatype="enum" >
     <EnumValue value="White" />
     <EnumValue value="Green" />
