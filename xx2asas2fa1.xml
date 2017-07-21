@@ -3,7 +3,6 @@
 <UserPref name="titelGadget" display_name="Titel" required="true" default_value="Answer and Questions" datatype="string"/>
 <UserPref name="xmlURL" display_name="Xml-file (url)." required="true" default_value="https://sites.google.com/site/piotrekggsite/host.xml" datatype="string"/>
 <!-- Edit title -->
-<ModulePrefs>
 <UserPref name="FontTypeTitel" display_name="Title-Font type:" default_value="ARIAL" datatype="string"/>
 <UserPref name="KLeurTitel" display_name="Title-Text color:" default_value="grey" datatype="enum" >
     <EnumValue value="Grey" />
@@ -15,7 +14,6 @@
     <EnumValue value="White" />
   </UserPref>
 <UserPref name="FontSizeTitel" display_name="Titel-Font size (px):" default_value="20" datatype="string"/>
-</ModulePrefs>
 <!-- Edit question -->
 <UserPref name="FontType" display_name="Text-Font type:" default_value="ARIAL" datatype="string"/>
 <UserPref name="FontKleur" display_name="Text-Text color:" default_value="grey" datatype="enum" >
