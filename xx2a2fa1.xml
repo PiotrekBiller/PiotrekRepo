@@ -3,6 +3,7 @@
 <UserPref name="titelGadget" display_name="Titel" required="true" default_value="Answer and Questions" datatype="string"/>
 <UserPref name="xmlURL" display_name="Xml-file (url)." required="true" default_value="https://sites.google.com/site/piotrekggsite/host.xml" datatype="string"/>
 <!-- Edit title -->
+<UserPref name="n" display_name="Display scrollbar" />
 <UserPref name="FontTypeTitel" display_name="Title-Font type:" default_value="ARIAL" datatype="string"/>
 <UserPref name="KLeurTitel" display_name="Title-Text color:" default_value="grey" datatype="enum" >
     <EnumValue value="Grey" />
