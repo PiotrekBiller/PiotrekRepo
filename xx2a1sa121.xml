@@ -1,0 +1,74 @@
+<Module>
+<ModulePrefs title="__UP_titelGadget__" screenshot="http://hosting.gmodules.com/ig/gadgets/file/114039339319885904355/QAnswersShowHide.jpg" author="Peter" author_email="exercisesinburgering@live.com" author_link="http://sites.google.com/site/exercisesinburgering/" description="showHide in a gadget, nice for FAQ or educationals purposes like language exercises or tests. 10.07.2011: Added background colour option" height="400" width="400" thumbnail="http://hosting.gmodules.com/ig/gadgets/file/114039339319885904355/QAnswersShowHide.gif" scaling="true"/>
+<UserPref name="titelGadget" display_name="Titel" required="true" default_value="FAQ-Questions for exercises" datatype="string"/>
+<UserPref name="xmlBestand" display_name="Xml-bestand (url)." required="true" default_value="http://hosting.gmodules.com/ig/gadgets/file/114039339319885904355/faq_gadget.xml" datatype="string"/>
+<UserPref name="FontTypeTitel" display_name="Titel: Fonttype" default_value="ARIAL" datatype="string"/>
+<UserPref name="KLeurTitel" display_name="Titel Kleur:" default_value="grey" datatype="string"/>
+<UserPref name="FontSizeTitel" display_name="Titel aantal px:" default_value="20" datatype="string"/>
+<UserPref name="FontType" display_name="Tekst: Fonttype" default_value="ARIAL" datatype="string"/>
+<UserPref name="FontKleur" display_name="Tekst kleur:" default_value="grey" datatype="string"/>
+<UserPref name="FontSize" display_name="Tekst aantal px:" default_value="14" datatype="string"/>
+<UserPref name="PaddingLeft" display_name="Padding px:" default_value="5" datatype="string"/>
+<UserPref name="BackGround" display_name="Achtergrond:" default_value="white" datatype="string"/>
+<Content type="html">
+<![CDATA[
+
+<script language="JavaScript"> 
+function toggle(targetId) { 
+    target = document.all(targetId); 
+    if (target.style.display == "none"){ 
+        target.style.display=""; 
+        } else { 
+            target.style.display="none"; 
+            target.style.color="grey"; 
+        } 
+    } 
+</script> 
+<div id="content_div" style="background-color:__UP_BackGround__">
+    </div> 
+    <script type="text/javascript"> 
+    // get prefs 
+    var prefs = new gadgets.Prefs(); 
+    var xmlBestand = prefs.getString("xmlBestand"); 
+    //var xmlBestand = "http://home.hccnet.nl/mpm.vanderfeesten/vraaglijst.xml"; 
+    function makeDOMRequest() { 
+        var params = {}; 
+        params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.DOM; 
+        gadgets.io.makeRequest(xmlBestand, response, params); }; 
+        function response(obj) { 
+            //zo haal je iets uit de xml 
+            var domdata = obj.data; 
+            var title = domdata.getElementsByTagName("oefening").item(0).getAttribute("title"); 
+            var html="<div style=\"font-family:__UP_FontType__; color:__UP_FontKLeur__; font-size:__UP_FontSize__px; \"><span style=\"font-family:__UP_FontTypeTitel__; color:__UP_KLeurTitel__; font-size:__UP_FontSizeTitel__px;\">"+title+"</span><br/><br/>"; 
+            // Get a list of the <vraag> element nodes in the file 
+            var itemList = domdata.getElementsByTagName("vraag"); 
+            // Loop through all <vraag> nodes 
+            for (var i = 0; i < itemList.length ; i++) { 
+                // For each <vraag> node, get child nodes. 
+                var nodeList = itemList.item(i).childNodes; 
+                // Loop through child nodes. Extract data from the text nodes 
+                for (var j = 0; j < nodeList.length ; j++) { 
+                    var node = nodeList.item(j); 
+                    if (node.nodeName == "inleiding") { 
+                        var inleiding = node.firstChild.nodeValue; 
+                        } 
+                        if (node.nodeName == "vraagstelling") { 
+                            var vraagstelling = node.firstChild.nodeValue; 
+                            } 
+                            if (node.nodeName == "antwoord" ) { 
+                                //if (node.firstChild.nodeName == "#cdata-section") 
+                                var antwoord = node.firstChild.nodeValue; } 
+                                } 
+                                // Append extracted data to the HTML string. 
+                                if (inleiding != undefined) { 
+                                    html += "<span id=inleiding"+i+" style=\" font-family:__UP_FontType__; color:__UP_FontKleur__; font-size:__UP_FontSize__px; margin:0px; \">" + inleiding + "</span><br>"; } 
+                                    html += "<a href=\"javascript:toggle(\'antwoord"+i+"\')\"style=\" font-family:__UP_FontType__; color:__UP_FontKleur__; font-size:__UP_FontSize__px; text-decoration: none;\">"+vraagstelling+"</a>"; 
+                                    html += "<br>"; html += "<div id=antwoord"+i+" style=\" font-family:__UP_FontType__; color:__UP_FontKleur__; font-size:__UP_FontSize__px; padding-left:__UP_PaddingLeft__px; display:none;\">" + antwoord + "</div><br>"; } 
+                                    // Close up div 
+                                    html += "</div>"; document.getElementById('content_div').innerHTML += html; }; 
+                                    gadgets.util.registerOnLoadHandler(makeDOMRequest); 
+                                </script>
+
+]]>
+</Content>
+</Module>
