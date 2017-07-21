@@ -54,7 +54,7 @@ function toggle(targetId) {
         } 
     } 
 </script> 
-<div id="content_div">
+<div id="content_div" style="background-color:__UP_BackGround__">
     </div> 
     <script type="text/javascript"> 
     
