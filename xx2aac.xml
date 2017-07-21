@@ -99,9 +99,9 @@ function toggle(targetId) {
     var xmlURL = prefs.getString("xmlURL"); 
      
     function makeDOMRequest() { 
-        var params = {}; 
-        params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.DOM; 
-        gadgets.io.makeRequest(xmlURL, response, params); 
+        //var params = {}; 
+        //params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.DOM; 
+        gadgets.io.makeRequest(xmlURL, response); 
     };
 
         function response(obj) {              
