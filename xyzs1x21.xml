@@ -13,7 +13,7 @@
 		<UserPref name="question-3" display_name="Question-3"/>
         <UserPref name="answer-3" display_name="Answer nr3"/>
 
-        <UserPref name="questionList" display_name="Add data to list" datatype="list" default_value="el1|el2|el3 />
+        <UserPref name="questionList" display_name="Add data to list" datatype="list" default_value="el1|el2|el3" />
 
 
 
