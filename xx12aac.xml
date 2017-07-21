@@ -1,7 +1,7 @@
 <Module>
 <ModulePrefs title="__UP_titelGadget__" height="400" width="400" scaling="true"/>
 <UserPref name="titelGadget" display_name="Titel" required="true" default_value="Answer and Questions" datatype="string"/>
-<UserPref name="xmlURL" display_name="Xml-file (url)." required="true" default_value="https://sites.google.com/site/piotrekggsite/host.xml" datatype="string"/>
+<UserPref name="xmlURL" display_name="Xml-file (url)." required="true" default_value="https://sites.google.com/site/piotrekggsite/data.xml" datatype="string"/>
 <!-- Edit title -->
 <UserPref name="FontTypeTitel" display_name="Title-Font type:" default_value="ARIAL" datatype="string"/>
 <UserPref name="KLeurTitel" display_name="Title-Text color:" default_value="grey" datatype="enum" >
@@ -99,21 +99,21 @@ function toggle(targetId) {
     var xmlURL = prefs.getString("xmlURL"); 
      
     function makeDOMRequest() { 
-        //var params = {}; 
-        //params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.DOM; 
-        gadgets.io.makeRequest(xmlURL, response); 
+        var params = {}; 
+        params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.DOM; 
+        gadgets.io.makeRequest(xmlURL, response, params); 
     };
 
         function response(obj) {              
             var domdata = obj.data; 
-            var title = domdata.getElementsByTagName("oefening").item(0).getAttribute("title"); 
+            var title = domdata.getElementsByTagName("data").item(0).getAttribute("title"); 
             var html="<div style=\"font-family:__UP_FontType__; color:__UP_FontKLeur__; font-size:__UP_FontSize__px; \"><span style=\"font-family:__UP_FontTypeTitel__; color:__UP_KLeurTitel__; font-size:__UP_FontSizeTitel__px;\">"+title+"</span><br/><br/>"; 
             
-            // Get a list of the <vraag> element nodes in the file 
-            var itemList = domdata.getElementsByTagName("vraag"); 
-            // Loop through all <vraag> nodes 
+            // Get a list of the <set> element nodes in the file 
+            var itemList = domdata.getElementsByTagName("set"); 
+            // Loop through all <set> nodes 
             for (var i = 0; i < itemList.length ; i++) { 
-                // For each <vraag> node, get child nodes. 
+                // For each <set> node, get child nodes. 
                 var nodeList = itemList.item(i).childNodes; 
                 // Loop through child nodes. Extract data from the text nodes 
                 for (var j = 0; j < nodeList.length ; j++) { 
@@ -121,19 +121,19 @@ function toggle(targetId) {
                     if (node.nodeName == "inleiding") { 
                         var inleiding = node.firstChild.nodeValue; 
                         } 
-                        if (node.nodeName == "vraagstelling") { 
-                            var vraagstelling = node.firstChild.nodeValue; 
+                        if (node.nodeName == "question") { 
+                            var question = node.firstChild.nodeValue; 
                             } 
-                            if (node.nodeName == "antwoord" ) { 
+                            if (node.nodeName == "answer" ) { 
                                 //if (node.firstChild.nodeName == "#cdata-section") 
-                                var antwoord = node.firstChild.nodeValue; } 
+                                var answer = node.firstChild.nodeValue; } 
                                 } 
                                 // Append extracted data to the HTML string. 
                                 if (inleiding != undefined) { 
                                     html += "<span id=inleiding"+i+" style=\" font-family:__UP_FontType__; color:__UP_FontKleur__; font-size:__UP_FontSize__px; margin:0px; \">" + inleiding + "</span><br>"; } 
-                                    html += "<a href=\"javascript:toggle(\'antwoord"+i+"\')\"style=\" font-family:__UP_FontType__; color:__UP_FontKleur__; font-size:__UP_FontSize__px; text-decoration: none;\">"+vraagstelling+"</a>"; 
+                                    html += "<a href=\"javascript:toggle(\'answer"+i+"\')\"style=\" font-family:__UP_FontType__; color:__UP_FontKleur__; font-size:__UP_FontSize__px; text-decoration: none;\">"+question+"</a>"; 
                                     html += "<br>"; 
-                                    html += "<div id=antwoord"+i+" style=\" font-family:__UP_FontTypeAnswer__; color:__UP_FontKleurAnswer__; font-size:__UP_FontSizeAnswer__px; padding-left:25px; display:none;\">" + antwoord + "</div><br>"; } 
+                                    html += "<div id=answer"+i+" style=\" font-family:__UP_FontTypeAnswer__; color:__UP_FontKleurAnswer__; font-size:__UP_FontSizeAnswer__px; padding-left:25px; display:none;\">" + answer + "</div><br>"; } 
                                     // Close up div 
                                     html += "</div>"; document.getElementById('content_div').innerHTML += html; }; 
                                     gadgets.util.registerOnLoadHandler(makeDOMRequest); 
