@@ -1,7 +1,7 @@
 <Module>
 <ModulePrefs title="__UP_titelGadget__" height="400" width="400" scaling="true"/>
 <UserPref name="titelGadget" display_name="Titel" required="true" default_value="Answer and Questions" datatype="string"/>
-<UserPref name="xmlBestand" display_name="Xml-file (url)." required="true" default_value="https://sites.google.com/site/piotrekggsite/host.xml" datatype="string"/>
+<UserPref name="xmlURL" display_name="Xml-file (url)." required="true" default_value="https://sites.google.com/site/piotrekggsite/host.xml" datatype="string"/>
 
 <UserPref name="FontTypeTitel" display_name="Title-Font type:" default_value="ARIAL" datatype="string"/>
 <UserPref name="KLeurTitel" display_name="Title-Text color:" default_value="grey" datatype="string"/>
@@ -27,22 +27,24 @@ function toggle(targetId) {
         } 
     } 
 </script> 
-<div id="content_div" style="background-color:__UP_BackGround__">
+<div id="content_div">
     </div> 
     <script type="text/javascript"> 
-    // get prefs 
+    
     var prefs = new gadgets.Prefs(); 
-    var xmlBestand = prefs.getString("xmlBestand"); 
-    //var xmlBestand = "http://home.hccnet.nl/mpm.vanderfeesten/vraaglijst.xml"; 
+    var xmlURL = prefs.getString("xmlURL"); 
+     
     function makeDOMRequest() { 
         var params = {}; 
         params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.DOM; 
-        gadgets.io.makeRequest(xmlBestand, response, params); }; 
-        function response(obj) { 
-            //zo haal je iets uit de xml 
+        gadgets.io.makeRequest(xmlURL, response, params); 
+    };
+
+        function response(obj) {              
             var domdata = obj.data; 
             var title = domdata.getElementsByTagName("oefening").item(0).getAttribute("title"); 
             var html="<div style=\"font-family:__UP_FontType__; color:__UP_FontKLeur__; font-size:__UP_FontSize__px; \"><span style=\"font-family:__UP_FontTypeTitel__; color:__UP_KLeurTitel__; font-size:__UP_FontSizeTitel__px;\">"+title+"</span><br/><br/>"; 
+            
             // Get a list of the <vraag> element nodes in the file 
             var itemList = domdata.getElementsByTagName("vraag"); 
             // Loop through all <vraag> nodes 
