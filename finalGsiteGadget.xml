@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
   <ModulePrefs title="example" />
-  <UserPref name="myname" display_name="URL" default_value="https://tabemea.roche.com/views/Ipsbw_SapMon_Application_Availability/SAPApplicationAvailability" />
+  <UserPref name="myname" display_name="URL" required="true" />
   <Content type="html">
      <![CDATA[ 
       <!doctype html>
@@ -49,7 +49,8 @@
 
 				   function displayGreeting () {     
 					 var html = "";
-							 
+					
+					// https://tabemea.roche.com/views/Ipsbw_SapMon_Application_Availability/SAPApplicationAvailability
 					 var element = document.getElementById('frame').src = prefs.getString("myname");
 					 
 				   }   
