@@ -39,12 +39,14 @@
     <body>
         <div id="box">
             <div id="wrap">
-                
+                <iframe id="frame" src="https://tabemea.roche.com/views/Ipsbw_SapMon_Application_Availability/SAPApplicationAvailability&:toolbar=botton?:embed=y"></iframe>
             </div>
         </div>
-
+    </body>
+	
 				<script type="text/javascript">
 				   var prefs = new gadgets.Prefs();
+
 				   function displayGreeting () {     
 					 var html = "";
 							 
@@ -53,14 +55,12 @@
 					 // Set the background color according to the mycolor userpref
 					 //element.style.backgroundColor=prefs.getString("red");
 
-					 html += "<iframe id=\"frame\" src=\"" + prefs.getString("myname") + "\"></iframe>";
+					 html += prefs.getString("myname");
 
 					 element.innerHTML = html;
 				   }   
 				   gadgets.util.registerOnLoadHandler(displayGreeting);
-				   </script>		
-		
-    </body>
+			   </script>
 </html>
      ]]>
   </Content> 
