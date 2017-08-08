@@ -39,7 +39,7 @@
     <body>
         <div id="box">
             <div id="wrap">
-                <iframe id="frame" ></iframe>
+                <iframe id="frame" src=""></iframe>
             </div>
         </div>
     </body>
@@ -50,12 +50,8 @@
 				   function displayGreeting () {     
 					 var html = "";
 							 
-					 var element = document.getElementById('frame');
+					 var element = document.getElementById('frame').src = prefs.getString("myname");
 					 
-
-					 html += "src=\""+ prefs.getString("myname")+"\"";
-
-					 element.innerHTML = html;
 				   }   
 				   gadgets.util.registerOnLoadHandler(displayGreeting);
 			   </script>
