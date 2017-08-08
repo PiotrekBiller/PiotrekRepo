@@ -39,7 +39,7 @@
     <body>
         <div id="box">
             <div id="wrap">
-                <iframe id="frame" src="https://tabemea.roche.com/views/Ipsbw_SapMon_Application_Availability/SAPApplicationAvailability&:toolbar=botton?:embed=y"></iframe>
+                <iframe id="frame" ></iframe>
             </div>
         </div>
     </body>
@@ -51,11 +51,9 @@
 					 var html = "";
 							 
 					 var element = document.getElementById('wrap');
-					 //element.style.height=250;
-					 // Set the background color according to the mycolor userpref
-					 //element.style.backgroundColor=prefs.getString("red");
+					 
 
-					 html += prefs.getString("myname");
+					 html += "src=\""+ prefs.getString("myname")+"\"";
 
 					 element.innerHTML = html;
 				   }   
