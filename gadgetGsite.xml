@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="Preferences for __UP_myname__" height="400"/>
+  <ModulePrefs title="Gadget GSite" height="400"/>
   <UserPref name="myname" display_name="Name" default_value="Rowan"/>
   
   
@@ -10,28 +10,19 @@
    <script type="text/javascript">
    var prefs = new gadgets.Prefs();
 
-   function displayGreeting () {
-     // Get current time
-     
+   function displayGreeting () {     
      var html = "";
-
-    
-     // Set the background color according to the mycolor userpref
-	 
+        	 
      var element = document.getElementById('content_div');
      element.style.height=250;
      // Set the background color according to the mycolor userpref
      element.style.backgroundColor=prefs.getString("red");
 
-     // Display a greeting based on the myname userpref
      html += prefs.getString("myname") + "!!!";
 
      element.innerHTML = html;
-   }
-   // Pass the userprefs for this module instance to the function
-   // (allows users to include multiple module instances on their page)
+   }   
    gadgets.util.registerOnLoadHandler(displayGreeting);
-
    </script>
    ]]>
   </Content>
