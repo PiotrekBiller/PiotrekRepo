@@ -49,8 +49,7 @@
 
 				   function displayGreeting () {     
 					 var html = "";
-					
-					// https://tabemea.roche.com/views/Ipsbw_SapMon_Application_Availability/SAPApplicationAvailability
+										
 					 var element = document.getElementById('frame').src = prefs.getString("myname");
 					 
 				   }   
