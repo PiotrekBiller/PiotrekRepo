@@ -1,4 +1,5 @@
 <Module>
+<ModulePrefs title="Preferences for __UP_myname__" height="250" />
 <UserPref name="titelGadget" display_name="Title" required="true" default_value="Gadget" datatype="string"/>
 <UserPref name="xmlURL" display_name="Xml-file (url)." required="true" default_value="https://sites.google.com/site/piotrekggsite/data.xml" datatype="string"/>
 <!-- Edit title -->
