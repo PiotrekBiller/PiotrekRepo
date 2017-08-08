@@ -30,7 +30,7 @@
    }
    // Pass the userprefs for this module instance to the function
    // (allows users to include multiple module instances on their page)
-   //gadgets.util.registerOnLoadHandler(displayGreeting);
+   gadgets.util.registerOnLoadHandler(displayGreeting);
 
    </script>
    ]]>
