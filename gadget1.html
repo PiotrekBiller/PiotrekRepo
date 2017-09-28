@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs title="example" /> 
+  <Content type="html">
+     <![CDATA[ 
+<!doctype html>
+
+<!doctype html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        ul{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        .tabsMenu{
+            display: inline-flex;
+            border-bottom: 1px solid #ddd;
+            width:265px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .tabsLink, .tabsLink:visited{
+            display: block;
+            padding:6px 8px 4px 8px;
+            -webkit-border-top-left-radius: 8px;
+            -webkit-border-top-right-radius: 8px;
+            -moz-border-radius-topleft: 8px;
+            -moz-border-radius-topright: 8px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-top: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+            margin-right: 3px;
+            text-decoration: none;
+            background-color: #0066cc;
+            color: #fff;
+            width: auto;
+        }
+        .tabsLink:hover{
+            text-decoration: none;
+            background-color: #0046cc;
+        }
+        #tabs{
+            width:270px;
+        }
+        .tab{
+            margin-left:5px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#tabs" ).tabs();
+        } );
+    </script>
+</head>
+
+<body>
+
+    <div id="tabs">
+        <ul class="tabsMenu" >
+            <li><a href="#tabs-1" class="tabsLink">Upcoming Events</a></li>
+            <li><a href="#tabs-2" class="tabsLink">Calendar view</a></li>
+             <li><a href="#tabs-3" class="tabsLink">Major Incident</a></li> 
+        </ul>
+        <div id="tabs-2" class="tab">
+            <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showTabs=0&amp;showCalendars=0&amp;height=320&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=roche.com_nh1b21lpa5916bgllp5r0ivtuk%40group.calendar.google.com&amp;color=%236B3304&amp;ctz=Europe%2FMadrid" style="border-width:0" width="250" height="320" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div id="tabs-1" class="tab">
+            <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=320&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=roche.com_nh1b21lpa5916bgllp5r0ivtuk%40group.calendar.google.com&amp;color=%236B3304&amp;ctz=Europe%2FMadrid" style="border-width:0" width="250" height="320" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div id="tabs-3" class="tab">
+            <img src="https://www.google.com/chart?chc=sites&amp;cht=d&amp;chdp=sites&amp;chl=%5B%5BRecent+announcements'%3D20'f%5Cv'a%5C%3D0'10'%3D399'0'dim'%5Cbox1'b%5CF6F6F6'fC%5CF6F6F6'eC%5C0'sk'%5C%5B%22Recent+Announcements%22'%5D'a%5CV%5C%3D12'f%5C%5DV%5Cta%5C%3D10'%3D0'%3D400'%3D297'dim'%5C%3D10'%3D10'%3D400'%3D297'vdim'%5Cbox1'b%5Cva%5CF6F6F6'fC%5CC8C8C8'eC%5C'a%5C%5Do%5CLauto'f%5C&amp;sig=SbZ1HTb3-SdNqDtQO_N3GCDihBQ" data-type="recent-announcements" data-props="align:right;borderTitle:Recent Announcements;num:2;postLength:SMALL;showBorder:false;showBorderTitle:false;showThumbnail:true;srcPage:4a85852e8a30aa18;wrap:true;" width="400" height="300" style="display:inline;float:right;margin:5px 0 5px 20px;">
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
+ ]]>
+  </Content> 
+</Module>
