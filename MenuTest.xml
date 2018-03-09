@@ -15,7 +15,7 @@
             padding: 0;
             margin: 0px 0;
             width: 100%;
-            padding-left: 50px;
+            padding-left: 78px;
         }
 
         .nav>li {
